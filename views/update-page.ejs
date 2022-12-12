@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link href="../tailwind.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen w-full bg-blue-400">
+        <div class="w-1/2 bg-white rounded shadow-2xl p-8 m-4">
+            <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Update Data</h1>
+            <form action="/update/<%= results.id %>" method="post">
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="nama">Nama</label>
+                    <input class="border py-2 px-3 text-grey-800" type="text" name="nama" id="nama" value="<%=results.nama%>">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="telp">No. Telp</label>
+                    <input class="border py-2 px-3 text-grey-800" type="text" name="telp" id="telp" value="<%=results.telp%>">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="nim">NIM</label>
+                    <input class="border py-2 px-3 text-grey-800" type="number" name="nim" id="nim" value="<%=results.nim%>" readonly>
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="fakultas">Fakultas</label>
+                    <input class="border py-2 px-3 text-grey-800" type="text" name="fakultas" id="fakultas" value="<%=results.fakultas%>">
+                </div>
+                <a class="text-blue-600 hover:text-blue-800 font-bold" href="/">Kembali</a>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded py-2 px-4" type="submit">Update</button>    
+            </form>
+        </div>
+    </div>   
+</body>
+</html>
